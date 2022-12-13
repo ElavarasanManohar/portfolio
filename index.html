@@ -1,0 +1,239 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;700&family=Raleway:ital,wght@1,100;1,200;1,363;1,400&family=Unica+One&display=swap" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <style> @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;700&family=Raleway:ital,wght@1,100;1,200;1,363;1,400&family=Unica+One&display=swap'); </style>
+        <title>Portfolio</title>
+
+    </head>
+
+    <body>
+        <header>
+            <nav>
+            <div class="row">
+                <a href="#intro" class="Logo" onclick="closeSidebar()" >
+                    <span class="thenSymbol">&#60;</span><span>E</span><span class="thenSymbol">&#62;</span>
+                </a>
+
+             <ul class="main-nav">
+                <li><a href="#about"><p>01.</p>About</a></li>
+                <li><a href="#projects"><p>02.</p>Projects</a></li>
+                <li><a href="#skills"><p>03.</p>Skills</a></li>
+                <li><a href="#contact"><p>04.</p>Contact</a></li>
+            </ul>
+        <img id="openBtn" onclick="openSidebar()" class="externalLinkImg" src="resources/img/menu.png" alt="menu">
+        </div>
+    </nav>
+     <nav id="mobileSideNav">
+        <img id="closeButton" onclick="closeSidebar()" class="externalLinkImg" src="resources/img/close.png" alt="menu">
+        <ul class="side-nav">
+            <li onclick="closeSidebar()"  ><a href="#about"><p>01.</p>About</a></li>
+            <li onclick="closeSidebar()"  ><a href="#projects"><p>02.</p>Projects</a></li>
+            <li onclick="closeSidebar()"  ><a href="#skills"><p>03.</p>Skills</a></li>
+            <li onclick="closeSidebar()" ><a href="#contact"><p>04.</p>Contact</a></li>
+        </ul>
+    </nav>
+    <div id="intro" ></div>
+    <div class="intro-text-box">
+        <p class="hello">Hello!</p>
+        <p class="intro-name">I'm Elavarasan Manohar</p>
+        <p class="web-dev">Web Developer</p>
+        <p class="intro-des animated pulse">I build things for the web</p>
+    </div>
+    
+        </header>
+
+        <div class="sideBar">
+            <a href = "mailto: elavarasanmano98@gmail.com">elavarasanmano98@gmail.com</a>
+            <div></div>
+        </div>
+        <div id="about"></div>
+        <section class="section-about fadeIn">
+            <div class="row">
+                <h1><span>01.</span>About Me</h1>
+            </div>
+            <div class="box-about"> 
+                <div class="about-decrip">                    
+                    <p>Hello! My name is Elavarasan and I enjoy creating things that live on the internet. My interest in web development started back in 2019, while studying <span>information technology</span> in my college!</p>
+                    <p>I am passionate about learning and implementing skills related to web technologies. And having good understanding and experience on  <span>HTML</span>,<span>CSS</span>,<span>Javascript</span>, <span>ReactJS</span> and front-end user interface development. </p>
+                </div>
+                
+            </div>  
+        </div>
+        </section>
+        <div id="projects"></div>
+        <section class="section-project fadeIn">
+            <div class="row">
+                <h1><span>02.</span>Some Things I’ve Built</h1>
+            </div>
+
+            <div class="projectAppWrapper">
+                <div class="projectAppImgWrapper">
+                    <img src="resources/img/weatherAppColored.jpg" alt="weatherApp site">
+                </div>
+                <div class="projectAppDescWrapper">
+                    <div class="projNameContainer">
+                        <span>Project Name</span>
+                        <p>Weather App</p>
+                    </div>
+
+                    <div class="projDescContainer">
+                        This weather app UI is used to display the weather conditions based on selected locations.
+This app also provides wind speed, sunrise time, high and low temperature value for hourly weather forecast.
+
+                    </div>
+                    <div class="projTechnlogies">
+                        <span>HTML</span>
+                        <span>Css</span>
+                        <span>JavaScript</span>
+                        <span>React JS</span>
+                    </div>
+                    <a target="_blank" href="https://weatherappreact-dff20.web.app/">
+                    <button>View</button>
+                </a>
+                </div>
+            </div>
+
+            <div class="miniProjectSubSection">
+                <div class="row">
+                    <h1>Other Mini Projects</h1>
+                </div>
+                <div class="miniProJGridContainer">
+                    <div class="grid-item">
+                        <div class="griditemTop">
+                            <img class="webPageImg" src="resources/img/web-page.png" alt="web-page">
+                            <a target="_blank" href="https://elavarasanmanohar.github.io/WebTimers/">
+                            <img class="externalLinkImg" src="resources/img/external-link.png" alt="external-link">
+                        </a>
+                        </div>
+                        <p class="ItemHeading">Office Web Timer for Mobile with dark theme</p>
+                        <p class="ItemDesc">This is used to calculate the Office out Time(9+ hrs).
+                            This Timer is simple and easy to use.</p>
+                            <div class="ItemprojTechnlogies">
+                                <span>HTML</span>
+                                <span>Css</span>
+                                <span>JavaScript</span>
+                            </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="griditemTop">
+                            <img class="webPageImg" src="resources/img/web-page.png" alt="web-page">
+                            <a target="_blank" href="https://elavarasanmanohar.github.io/CalItemizedBill/">
+                            <img class="externalLinkImg" src="resources/img/external-link.png" alt="external-link">
+                        </a>
+                        </div>
+                        <p class="ItemHeading">Web bill calculator for products using javascript </p>
+                        <p class="ItemDesc">This is the most simple  & handy shopping calculator web app.
+                            This is used to calculate the    Products Bill.</p>
+                            <div class="ItemprojTechnlogies">
+                                <span>HTML</span>
+                                <span>Css</span>
+                                <span>JavaScript</span>
+                            </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="griditemTop">
+                            <img class="webPageImg" src="resources/img/web-page.png" alt="web-page">
+                            <a target="_blank" href="https://elavarasanmanohar.github.io/Puzzle/">
+                            <img class="externalLinkImg" src="resources/img/external-link.png" alt="external-link">
+                        </a>
+                        </div>
+                        <p class="ItemHeading">Tiles Puzzle Game</p>
+                        <p class="ItemDesc">Tiles is a relaxing puzzle game.
+                            Solve the different patterns by using each tile in the puzzle
+                            3 х 3 (8 tiles) – for beginners and kids;</p>
+                            <div class="ItemprojTechnlogies">
+                                <span>HTML</span>
+                                <span>Css</span>
+                                <span>JavaScript</span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+         
+    </section>
+    <div id="skills"></div>
+            <section class="section-skills fadeIn">
+                <div class="row">
+                    <h1><span>03.</span>Skills</h1>
+                    <h2>Programming Skills</h2>
+                        <ul class="pro-skills">
+                    <li><ion-icon name="logo-html5" class="skillIcon logo-html5"></ion-icon><p>HTML</p></li>
+                    <li><ion-icon name="logo-css3" class="skillIcon logo-css3"></ion-icon><p>CSS</p></li>
+                    <li><ion-icon name="logo-javascript" class="skillIcon logo-javascript"></ion-icon><p>Javascript</p></li>
+                    <li><ion-icon name="logo-react" class="skillIcon logo-reactjs"></ion-icon><p>React JS</p></li>
+                </ul>
+                <h2>Certifications</h2>
+                <ul class="pro-Certificates">
+                    <li><p><span>React</span> - The Complete Guide (incl Hooks, React Router, Redux) Certification on UDEMY</p>
+                        <a target="_blank" href="https://www.udemy.com/certificate/UC-279fd391-6bc8-4f52-8bb9-f3983fab5343/">
+                            <img class="" src="resources/img/external-link.png" alt="external-link">
+                        </a>
+                        </li>
+                    </li>
+                    <li><p><span>React Js</span> Skills Certification - HackerRank</p>
+                        <a target="_blank" href="https://www.hackerrank.com/certificates/iframe/908902E19919">
+                            <img class="" src="resources/img/external-link.png" alt="external-link">
+                        </a>
+                        </li>
+                    </li>
+                    <li><p>Build Responsive Real-World Websites with <span>HTML</span> and <span>CSS</span> on UDEMY</p>
+                        <a target="_blank" href="https://www.udemy.com/certificate/UC-9cff9db9-3aa3-432e-8059-63c7cd8a59a9/">
+                            <img class="" src="resources/img/external-link.png" alt="external-link">
+                        </a>
+                        </li>
+                    </li>
+                    <li><p><span>React</span> + <span>Redux</span> course Certification on sololearn</p>
+                        <a target="_blank" href="sololearn.html">
+                            <img class="" src="resources/img/external-link.png" alt="external-link">
+                        </a>
+                        </li>
+                    </li>
+                    <li><p>Certificate of <span>React 16.x</span> on studysection</p>
+                        <a target="_blank" href="studysection.html">
+                            <img class="" src="resources/img/external-link.png" alt="external-link">
+                        </a>
+                        </li>
+                    </li>
+                </ul>
+                </div>
+
+            </section>
+
+            <section class="section-contact fadeIn" id="contact">
+                <div class="row">
+                    <div class="row">
+                        <h1><span>04.</span>Contact</h1>
+                    </div>
+                    <div class="box-contact">
+                    <h3>Contact Information</h3>
+                    <!-- <p>Phone Number: <span>9843359186</span></p> -->
+                    <p>Gmail : <span>elavarasanmano98@gmail.com</span></p>
+                </div>
+                </div>
+            </section>
+            <footer>
+
+            <div class="row">
+                     <p>This site is buit by Me 
+                      </p>
+                    <a href="https://www.flaticon.com/" title="icons"> Icons from Flaticon</a>
+                    <div>
+                <div>
+            </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="resources/js/script.js"></script>
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+        
+    </body>
+</html>

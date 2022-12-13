@@ -1,0 +1,872 @@
+/*________________________________*/
+/*Basic setup*/
+/*________________________________*/
+
+*{
+    margin :0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+html ,
+body{
+background-color: #0b2239;
+color:#f7fcfe ;
+font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+font-weight: 300;
+font-size: 20px;
+text-rendering: optimizeLegibility;
+scroll-behavior: smooth;
+}
+
+.certificate img{
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+::-webkit-scrollbar-track {
+    background: #0b2239; 
+  }
+   
+  /* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2e4c69; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #47c98a; 
+  }
+.clearfix{zoom: 1}
+.clearfix:after{
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+ }
+ 
+ @font-face {
+    font-family: myFirstFont;
+    src: url(sansation_bold.woff);
+    font-weight: bold;
+ }
+ /*Heading*/
+
+
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ccd6f6;
+    font-size: 25px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-weight: 540;
+}
+
+h1:after{
+    display: inline-block;
+    height: 1px;
+    background-color:#47c98a ;
+    content: " ";
+    width:30%;
+    vertical-align: middle;
+    margin-left: 2%;
+}
+
+h1 span{
+    color: #47c98a;
+    font-size: 22px;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+@keyframes example {
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(50deg);}
+    50%  {transform: rotate(0deg);}
+  }
+
+  
+h2{
+    font-size: 150%;
+    word-spacing:1px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+
+}
+
+.fadeIn-animation {
+    animation-name: fadeInAnimation;
+    animation-duration: 7s;
+}
+@keyframes fadeInAnimation {
+    0%   {opacity:0;}
+    25%  {opacity:1;}
+  }
+/*________________________________*/
+/*Reusable components*/
+/*________________________________*/
+
+.row{
+    max-width:1140px;
+    margin: 0 auto;
+}
+
+section{
+    padding: 80px 0px;
+}
+
+.box{
+    padding: 1%;
+}
+
+nav{
+    position: fixed;
+    z-index: 1;
+    background-color: #0b2239;
+    width: 100%;
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+    border: 0;
+    margin-top: 50px;
+    font-size: 80%;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+
+.main-nav li{
+    display:inline-block;
+    margin-right: 20px;
+}
+
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    text-decoration: none;
+    color: #f7fcfe ;
+    font-size: 90%;
+    border-top: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-top: 2px solid #47c98a;
+}
+
+
+.main-nav li p{
+display: inline-block;
+color: #47c98a;
+}
+
+#openBtn{
+    float: right;
+    margin-top: 5.5%;
+    margin-right: 5%;
+    display: none;
+    width: 40px;
+    
+}
+
+@keyframes example {
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(50deg);}
+    50%  {transform: rotate(0deg);}
+  }
+
+#closeButton{
+    margin-top: 13.5%;
+    margin-right: 10%;
+    width: 35px;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+#mobileSideNav{
+    position: fixed;
+    height: 100vh;
+    width: 50%;
+    background-color:#0d2b49;
+    right: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    right: -50%;
+    display: none;
+    z-index: 1;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+#mobileSideNav button{
+   float: right;
+   margin-top : 15%;
+   margin-right: 5%;
+}
+
+
+.side-nav{
+list-style: none;
+margin-top: 50%;
+
+}
+
+.side-nav li{
+    list-style: none;
+    text-align: center;
+    padding-bottom: 10%;
+    font-weight: 200;
+    line-height: 26px;
+}
+
+.side-nav li a{
+    text-decoration: none;
+    color: #f7fcfe;
+}
+
+.side-nav li p{
+    font-size: 17px;
+    color: #47c98a;
+}
+@media only screen and (max-width: 500px) {
+    #mobileSideNav{
+        width: 70%;
+    }
+    .side-nav{
+        margin-top: 60%;
+        }
+}
+@media only screen and (max-width: 768px) {
+    .main-nav{
+        display: none;
+    }
+    #openBtn{
+        display: block;
+    }
+}
+
+
+/*________________________________*/
+/*---------Header*---------/
+/*________________________________*/
+
+header {
+    background-color: #0b2239;
+    margin-top: 0%;
+    width: auto;
+    height: 95%;
+    background-attachment:fixed;
+}
+
+.sideBar{
+    position: fixed;
+    right:-5%;
+    top: 75%;
+    transform: rotate(90deg);
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    font-size: 16px;
+    font-weight: 200;
+    line-height:10px;
+    z-index: 1;
+}
+.sideBar a{
+    display: inline-block;
+    padding-right: 10px;
+    text-decoration: none;
+    color:#d0d5e6;
+}
+.sideBar div{
+    display: inline-block;
+    content: "";
+    width: 90px;
+    height: 1px;
+    margin: 0px auto;
+    background-color:#a8b2d1;
+    vertical-align: middle;
+}
+
+.sideBar a:hover{
+    color: #47c98a;
+}
+
+.sideBar div:hover{
+    background-color: #47c98a;
+}
+@media only screen and (max-width: 1300px) {
+    .sideBar{
+        right: -10%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .sideBar{
+        display: none;
+    }
+}
+.intro-text-box{
+    position: absolute;
+    margin-top:14%;
+    margin-left: -10%;
+    left: 28%;
+    text-align: left;
+    opacity: 1;
+}
+@media only screen and (max-width: 992px) {
+    .intro-text-box{
+        margin-top: 25%;
+    }
+}
+
+.Logo{
+   text-decoration: none;
+   margin-top: 2%;
+   margin-left:-1%;
+   display: inline-block;
+   font-size: 60px;
+   color: #47c98a;
+   font-weight: 500;
+   font-family: 'Unica One';
+   font-style: italic;
+}
+
+.hello{
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    font-size: 250%;
+
+}
+.intro-name{
+    margin-top: 2%;
+    font-size: 280%;
+    color:#47c98a;
+    font-weight: 420;
+    font-family: "Poppins", Sans-serif;
+}
+
+.web-dev{
+    margin-top: 2%;
+    font-size: 160%;
+    font-weight: 200;
+    font-family:  "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    color: #ccd6f6;
+}
+
+.intro-des{
+    margin-top: 4.5%;
+    font-size: 140%;
+    font-family:  "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    font-weight: 400;
+}
+
+ion-icon{
+    display: inline-block;
+    margin-top: 2%;
+    font-size: 300%;
+}
+
+.icon__capture1{
+    display: inline-block;
+    position: absolute;
+    font-size:350%;
+    color:#47c98a;
+    transition: transform  0.5s;
+}
+
+.icon__capture1:hover{
+    transform: rotate(40deg);
+}
+@media only screen and (max-width: 600px) {
+    header {   
+        height: 45%;
+    }
+    .intro-text-box{
+        margin-top: 45%;
+        margin-left: -17%;
+    }
+    .hello{
+        font-size: 220%;
+    }
+    .intro-name{
+        font-size: 140%;
+    }
+    
+    .web-dev{
+        font-size: 120%;
+    }
+    
+    .intro-des{
+        font-size: 100%;
+    }
+    
+}
+
+
+/*________________________________*/
+/*---------About---------*/
+/*________________________________*/
+.section-about{
+    margin-left: 17.9%;
+    margin-top: 4%;
+}
+
+.box-about{
+    color:#8892b0;
+}
+
+.about-decrip{
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    font-size: 90%;
+    font-weight:400;
+    line-height: 26px;
+}
+.about-decrip p{
+    margin-top: 2%;
+}
+.about-decrip p span{
+    color:#47c98a;
+}
+.box-about i{
+    color:#47c98a;
+    display: inline-block;
+    margin-bottom: 4%;
+}
+
+@media only screen and (max-width: 600px) {
+    .section-about{
+        margin-left: 12%;
+        margin-top: 4%;
+    }    
+    .about-decrip{
+        width: 90%;
+    }
+}
+
+/*________________________________*/
+/*---------Project---------*/
+/*________________________________*/
+
+.section-project{
+    height:150vh;
+    margin-left: 17.9%;
+    margin-top: 2%;
+}
+
+.projectAppWrapper {
+    margin-top: 5%;
+}
+.projectAppImgWrapper{
+    display: inline;
+}
+.projectAppWrapper img{
+    height: 40%;
+    width: 50%;
+    display: inline-block;
+}
+
+.projectAppDescWrapper{
+    display: inline-block;
+    width: 35%;
+    vertical-align: top;
+    text-align: right;
+}
+.projectAppDescWrapper button{
+    
+    border: 2px solid #47c98a;
+  color: #47c98a;
+  background-color: transparent;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top: 5%;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+.projectAppDescWrapper button:active {
+    box-shadow: 0 2px #47c98a;
+    transform: translateY(1px);
+  }
+.projNameContainer{
+    margin-top: 5%;
+}
+.projNameContainer span{
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    font-size: 17px;
+    line-height: 17px;
+    color: #47c98a;
+}
+.projNameContainer p{
+    color: #ccd6f6;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.projDescContainer{
+    margin-left: -10%;
+    margin-top: 5%;
+    width: 120%;
+    height: 15%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color:#0d2b49 ;
+    font-size: 15px;
+    padding:5% 5%;
+    color: #ccd6f6;
+}
+
+.projTechnlogies{
+    margin-top: 5%;
+    color: #a8b2d1;
+    font-size: 15px;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+.projTechnlogies span{
+    padding-left: 5%;
+}
+@media only screen and (max-width: 992px) {
+    .projectAppWrapper{
+        margin-top: 25%;
+    }
+    .projDescContainer{
+    height: 19%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .section-project{
+        margin-left: 12%;
+    }   
+    .section-project h1{
+        letter-spacing: 0.5px;
+    }
+    .section-project h1:after{
+        width:5%;
+    }
+    .projectAppWrapper{
+        width: 90%;
+        margin-top: 10%;
+    }
+    .projectAppImgWrapper{
+        width: 90%;
+        height: 20%;
+        overflow: hidden;
+    }
+    .projectAppWrapper img{
+        height: 20%;
+        width: 100%;
+       
+    }
+    .projectAppDescWrapper{
+        width: 90%;
+    }
+    .projDescContainer{
+        margin-left: 0%;
+    width: 110%;
+    height: 17%;
+    }
+}
+
+.miniProjectSubSection{
+    text-align: left;
+    margin-top: 12%;
+}
+.miniProjectSubSection h1{
+   margin-left: 33%;
+}
+.miniProjectSubSection h1::after{
+    display: none;
+}
+
+
+.miniProJGridContainer{
+    margin-top: 5%;
+    display: grid;
+  grid-template-columns: 33% 33% 33% ;
+  grid-column-gap:10px;
+  /* background-color: #2196F3; */
+  width: 88%;
+
+}
+.grid-item {
+    background-color:#0d2b49 ;
+    padding: 20px 25px;
+    font-size: 30px;
+    height: 280px;
+    border-radius: 5px;
+  }
+.grid-item:hover{
+    margin-top: -1%;
+}
+.webPageImg{
+    width: 45px;
+}
+.externalLinkImg{
+    width: 22px;
+    float: right;
+    cursor: pointer;
+}
+.grid-item .ItemHeading{
+    margin-top: 8%;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #ccd6f6;
+}
+
+.grid-item .ItemDesc{
+    margin-top: 3%;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    color: #ccd6f6;
+}
+
+
+.ItemprojTechnlogies{
+    margin-top: 10%;
+    color: #a8b2d1;
+    font-size: 15px;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+.ItemprojTechnlogies span{
+    padding-right: 5%;
+}
+@media only screen and (max-width: 1200px) {
+    .miniProJGridContainer{        
+      grid-template-columns: 49% 49% ;  
+      grid-row-gap:10px;
+    }
+    .section-project{
+        margin-bottom: 35%;
+    }
+}
+
+@media only screen and (max-width: 846px) {
+    .miniProJGridContainer{        
+      grid-template-columns: 100% ;  
+      grid-row-gap:10px;
+    }
+    .section-project{
+        margin-bottom:80%;
+    }
+    .miniProjectSubSection{
+        margin-top: 20%;
+    }
+
+    .miniProjectSubSection h1{
+     width: 90%;
+     margin: 0;
+     text-align: center;
+     font-size: 110%;
+     }
+    
+}
+@media only screen and (max-width: 600px) {
+    .section-project{
+        margin-bottom:120%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .section-project{
+        margin-bottom:125%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .section-project{
+        margin-bottom:155%;
+    }
+}
+/*________________________________*/
+/*---------Skills&Certification---------*/
+/*________________________________*/
+
+.section-skills{
+    background-color: #0b2239;
+    width: 60%;
+    margin-left: 17.9%;
+    margin-top: 5%;
+}
+.section-certifi{
+    margin-top: -1%;
+    background-color: #0b2239;
+    height: 50%;
+}
+
+.section-skills h2{
+    color: #ccd6f6;
+    font-size: 100%;
+    margin-top: 4%;
+}
+
+.pro-skills li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 5%;
+    text-align: center;
+}
+
+.pro-skills li:first-child{
+    margin-left: 0%;
+}
+.pro-skills li p{
+    text-align: center;
+    color: #a8b2d1;
+    font-size: 17px;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+.logo-html5{
+    color: #E44D26;
+}
+
+.logo-css3{
+    
+    color: #264de4;
+}
+
+.logo-javascript{
+    color: #F0DB4F;
+}
+
+.logo-reactjs{
+    color:	#5382a1;
+}
+
+.pro-Certificates li{
+    list-style: none;
+}
+.pro-Certificates li p{
+    display: inline-block;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #ccd6f6;
+    margin-bottom: 2%;
+}
+.pro-Certificates li span{
+    color: #47c98a;
+}
+.pro-Certificates li img{
+    width: 15px;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .section-skills{
+        margin-left: 12%;
+        width: 75%;
+    }
+    .pro-skills li{
+        width: 20%;
+        margin-left: 2%;
+    }
+    .pro-skills li p{
+        font-size: 12px;
+    }
+    .pro-Certificates li p{
+        font-size: 12px;
+    }
+    .pro-Certificates li img{  
+        margin-left: 0%;
+    }
+}
+
+/*________________________________*/
+/*---------Contact---------*/
+/*________________________________*/
+.section-contact{
+    color:#3b4c5a;
+    margin-left: 17.9%;
+    width: 60%;
+    margin-top: 2%;
+    
+}
+.box-contact{
+    border: 1px solid #47c98a;
+    padding: 5% 0%;
+}
+.box-contact h3{
+    color: #ccd6f6;
+    font-size: 110%;
+    text-align: center;
+}
+.box-contact p{
+    font-size: 17px;
+    text-align: center;
+    line-height: 25px;
+    font-weight: 400;
+    color: #ccd6f6;
+}
+.box-contact p span{
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+.Thankyou{
+    width: 16%;
+    margin-left: -5%;
+    margin-bottom: -7%;
+}
+
+@media only screen and (max-width: 600px) {
+    .section-contact{
+        margin-left: 12%;
+        width: 75%;
+    }
+    .box-contact h3{ 
+        font-size: 100%;
+    }
+    .box-contact p{
+        font-size: 15px;
+    }
+}
+/*________________________________*/
+/*---------Footer---------*/
+/*________________________________*/
+
+
+footer{
+    height: 20%;
+    text-align: center;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+footer p{
+    font-size: 17px;
+    text-align: center;
+    line-height: 25px;
+    font-weight: 400;
+    color: #ccd6f6;
+}
+footer a{
+    margin-top: 1%;
+    display: block;
+     text-decoration: none;
+     font-size: 14px;
+     color: #a7b9f5;
+}
